@@ -19,7 +19,6 @@ namespace Exercice1
             t2.Start(c2);
             t3.Start(c3);
 
-
             Console.ReadLine();
         }
 

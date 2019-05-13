@@ -17,7 +17,20 @@ namespace Exercice1
         {
             this.nom = nom;
             this.n = n;
-         }
-        
+        }
+
+
+        public void Compter()
+        {
+            Random r = new Random();
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine(nom + " : " + i);
+                Thread.Sleep(r.Next(0, 5000));
+            }
+            Console.WriteLine("*** " + nom + " a fini de compter jusqu'à " + n);
+
+        }
     }
 }

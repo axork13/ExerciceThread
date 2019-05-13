@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace Exercice2
+namespace Exercice3
 {
     class Compteur
-    {        
+    {
         private static int position = 1;
-        private static object _lock = new object();
         private string nom;
         private int n;
 
@@ -20,7 +19,7 @@ namespace Exercice2
             this.nom = nom;
             this.n = n;
         }
-        
+
         public void Compter()
         {
             Random r = new Random();
@@ -30,10 +29,9 @@ namespace Exercice2
                 Console.WriteLine(nom + " : " + i);
                 Thread.Sleep(r.Next(0, 2000));
             }
-            lock(_lock)
-            {
-                Console.WriteLine("*** " + nom + " a fini de compter jusqu'à " + n + " en position " + position++);
-            }
+
+            Console.WriteLine("*** " + nom + " a fini de compter jusqu'à " + n + " en position " + position++);
+
         }
     }
 }

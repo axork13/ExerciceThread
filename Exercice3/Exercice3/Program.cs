@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Exercice2
+namespace Exercice3
 {
     class Program
     {
